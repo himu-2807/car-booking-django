@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Our Cars - Car Booking{% endblock title %}
+{% block body %}
+<style>
+  body{
+    background-color:#0c161e;
+  }
+    .book-btn {
+    background-color: #06402B;
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+  }
+  .book-btn:hover {
+    background-color: #2E6F40;
+    color: white;
+  }
+</style>
+
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold text-light">Our Car Collection</h1>
+    <p class="text-light">Choose from our wide range of top-rated cars for rent or test drive.</p>
+  </div>
+
+  <div class="row g-4">
+    {% for car in cars %}
+    <div class="col-md-4">
+      <div class="card car-card">
+        <img src="{{ car.image.url }}" class="car-img" alt="{{ car.name }}">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ car.name }}</h5>
+          <p class="text-muted">{{ car.car_type }} • ₹{{ car.price_per_day }}/day</p>
+          <a href="{% url 'booking' car.id %}" class="btn book-btn px-4">Book Now</a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+      <p class="text-center text-muted">No cars available at the moment.</p>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Page{% endblock title %}
+
+{% block body %}
+
+<style>
+  body{
+    background-color:#0c161e;
+  }
+</style>
+
+<div class="container my-4">
+    <h1 class="text-center text-white">Contact Us</h1>
+    <form method="post" action="/contact/">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="cname" class="form-label text-white">Name</label>
+          <input type="text" class="form-control" id="cname" name="cname" aria-describedby="nameHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label text-white">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label text-white">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label text-white">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{% endblock body %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+<style>
+  body{
+    background-color:#0c161e;
+  }
+</style>
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-white">About Our Classic Car Collection</h1>
+        <p class="lead text-light">
+            Step into the golden era of automobiles and witness the evolution of engineering and design excellence.
+        </p>
+    </div>
+
+    <!-- Section 1: Intro -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6 col-md-12 mb-4">
+            <img src="../static/collection3.jpg" class="img-fluid rounded shadow" alt="Classic car collection in museum">
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <h3 class="text-white fw-semibold">A Journey Through Time</h3>
+            <p class="text-light">
+                Our collection celebrates the timeless beauty of automotive craftsmanship. 
+                Each car has a story — from the early 1900s vintage convertibles to the mid-century icons of speed and luxury. 
+                These masterpieces reflect innovation, passion, and a love for design that transcends generations.
+            </p>
+            <p class="text-light">
+                We aim to preserve and share these marvels with enthusiasts, historians, and curious visitors who appreciate 
+                the artistry behind the wheel.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2: History -->
+    <div class="row align-items-center mb-5 flex-lg-row-reverse">
+        <div class="col-lg-6 col-md-12 mb-4">
+            <img src="../static/collection4.jpg" class="img-fluid rounded shadow" alt="Vintage red cars in collection" height = "300px">
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <h3 class="text-white fw-semibold">Our Heritage</h3>
+            <p class="text-light">
+                What started as a small private collection has grown into one of the most admired showcases of vintage automobiles. 
+                Every model is meticulously maintained, restored, and displayed with great care to honor its legacy.
+            </p>
+            <p class="text-light">
+                From rare classics to iconic roadsters, our exhibits are more than just cars — they’re living pieces of history.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 3: Mission -->
+    <div class="text-center bg-light p-5 rounded shadow-sm">
+        <h2 class="fw-bold mb-3">Our Mission</h2>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+            To preserve the legacy of classic automobiles and inspire a new generation of enthusiasts 
+            to cherish and protect the mechanical artistry that shaped our modern world.
+        </p>
+    </div>
+
+    <!-- Section 4: Contact Button -->
+    <div class="text-center mt-5">
+        <a href="/contact/" class="btn btn-primary btn-lg shadow-sm">
+            <i class="bi bi-envelope-fill"></i> Contact Us
+        </a>
+    </div>
+</div>
+{% endblock body %}
