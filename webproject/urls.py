@@ -19,8 +19,8 @@ from django.urls import path, include
 
 # Change the admin site attributes
 admin.site.site_header = "Cars Administration"
-admin.site.site_title = "Cars Admin Portal"
-admin.site.index_title = "Welcome to the Car Dekho Portal"
+admin.site.site_title = "PrimeDrive Portal"
+admin.site.index_title = "Welcome to the PrimeDrive Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
